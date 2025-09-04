@@ -1,0 +1,263 @@
+/* mobile view with larger height*/
+@media screen and (max-device-width:1000px) {
+    /* change the view of calendar and timetable on mobile*/
+
+    /* show the calendar message and direct link on mobile*/
+    #calendar a {
+        visibility: visible;
+        font: bold 3vw 'Open Sans', arial, sans-serif;
+    }
+    #calendar p {
+        visibility: visible;
+        font: 2.5vw 'Open Sans', arial, sans-serif;
+        margin-bottom: 0.5vh;
+    }
+    #calendar .textwithlink{
+        width: 75%;
+    }
+
+    /* then hide the Google calendar on mobile*/
+    iframe {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+/* adjust the view for pcs etc.*/
+@media screen and (min-device-width:1000px) {
+    .content{
+        margin-top: 0;
+    }
+
+
+    /* make the calendar message and direct link hidden*/
+    #calendar a {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+    #calendar p {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+
+}
+
+/* standart for every device*/
+
+
+/* home page header*/
+.gradient-overlay {
+    min-width: 100%;
+    background: rgb(37,53,80);
+    background: linear-gradient(180deg, rgba(37,53,80,1) 52%, rgba(255,255,255,1) 100%);
+    opacity: 0.9;
+    filter: blur(0.75px);
+}
+
+#headerpic {
+    max-width:100% !important;
+    height: auto;
+    display: flex;
+    background-image: url("https://www.utoronto.ca/sites/default/files/stgeorge-campus-cover.jpg");
+    background-size: cover;
+    background-position-y: 30%;
+    background-repeat: no-repeat;
+    border-bottom: solid;
+    border-bottom-width: 0.25rem;
+    height: 29vh;
+    z-index: 2;
+}
+#headercontbackground {
+    width: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#headercontent {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#uoftbluetoplogo {
+    width: 16vw;
+    visibility: visible;
+}
+
+#uoftwhitetoplogo {
+    width: 14vw;
+    margin-left: 8%;
+    visibility: hidden;
+}
+
+
+
+/* Content*/
+
+/* colors*/
+#introheaders {
+    width: 90%;
+    max-width: 90%;
+    color: #25355A;
+    font: bold 3vw 'Open Sans', arial, sans-serif;
+    margin-bottom: 0;
+    margin-left: 6%;
+}
+h1{
+    margin-bottom: 8%;
+}
+h3 {
+    font-size: 2.8vw;
+    align-self: center;
+}
+
+h4 {
+    margin-bottom: 0;
+    font-size: 2.5vw;
+}
+
+/* first part with headers*/
+#coursedescription {
+    padding: 2% 5%;
+    background-color: #F2F4F7;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    font: bold 1.7vw 'Open Sans', arial, sans-serif;
+    color: #000000;
+    opacity: 0.95;
+    margin-bottom: 6%;
+}
+
+/* a header then a text on top of each other*/
+.header-content {
+    width: 100%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.header-content p {
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+/* second part of the page with two tables*/
+#secondsection {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+    font: bold 1.2vw 'Open Sans', arial, sans-serif;
+}
+
+/* left table*/
+#lefttable {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F4F7;
+    color: #000000;
+    margin-right: 5%;
+    padding: 2%;
+    border: none;
+    border-radius: 1vw;
+}
+#lefttable row {
+    margin-bottom: 8%;
+}
+#lefttable .textwithlink p{
+    flex: 0;
+}
+#lefttable .textwithlink a {
+    flex:0;
+}
+#syllabus{
+    width: 100%;
+}
+
+
+/* right table*/
+#righttable {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F4F7;
+    color: #000000;
+    margin-left: 5%;
+    padding: 2%;
+    border: none;
+    border-radius: 1vw;
+}
+
+/* style the TA part in the Course Team section*/
+#tas {
+    display: flex;
+    flex-direction: column;
+}
+#tas img{
+    width: 15%;
+}
+#tapics{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#tanames {
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* a text and then a link next to each other*/
+.textwithlink{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.textwithlink p{
+    flex: 0.7;
+}
+.textwithlink a {
+    flex: 0.3;
+}
+
+
+/* calendar part*/
+#calendar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#pc-calendar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* adjust the calendar's frame position*/
+iframe {
+    width: 0;
+    visibility: hidden;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+

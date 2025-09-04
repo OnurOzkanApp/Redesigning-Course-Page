@@ -1,0 +1,78 @@
+<html>
+<head>
+    <meta name="viewport" contents="width=device-width, initial-scale=1">
+    <title>CSCB63 Design and  Analysis of Data Structures</title>
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <!-- css file links-->
+    <link rel="stylesheet" href="../static/CSS/nav.css">
+    <link rel="stylesheet" href="../static/CSS/login.css">
+</head>
+<body>
+    <!-- header -->
+    <div id="header">
+        <img class="uoftlogo" src='./static/uoftlogo.svg' />
+        <div id="coursename">
+            <p>CSCB63 <br> Design and Analysis of Data Structures</p>
+        </div>
+    </div>
+
+    <div class="background"></div>
+    <!-- content of page -->
+    <div class="content">
+        <div class="container">
+            <div class="top">
+                <img class="uoftlogomain" src='./static/uoftbluelogo.png' />
+                <hr>
+                <h3>CSCB63 - Design and Analysis of Data Structures</h3>
+            </div>
+
+            <!-- sign up form -->
+            <form method="POST">
+                <div class="loginbox">
+                    <div class="logintitle">
+                        <h2>SIGN UP</h2>
+                    </div>
+
+                    <div class="logindetails">
+                        <div class="loginform">
+                            <input type="text" class="loginfield" value="" placeholder="Username" name="username">
+                        </div>
+                        <div class="loginform">
+                            <input type="password" class="loginfield" value="" placeholder="Password" name="password">
+                        </div>
+                        <div class="accountchoice">
+                            <input type="radio" class="accountradio" id="accstu" checked="checked" value="Student" name="usertype">
+                            <label class="radiolabel" for="accstu">Student</label>
+                            <input type="radio" class="accountradio" id="accins" value="Instructor" name="usertype">
+                            <label class="radiolabel" for="accins">Instructor</label>
+                        </div>
+                        <input type="submit" value="Sign Up" class="loginbutton">
+                    </div>
+                    <div class="alternatelogin">
+                        <a href="/login">Already have an account?<br>Click to login.</a>
+                    </div>
+
+                    <!-- if username already exists-->
+                    <div id="usernameerror">
+                        <!-- taken from Flask documentation (message flashing)-->
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <p>{{messages[0]}}</p>
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- add the footer of the page-->
+    <div id="footer">
+        <div id="csfac"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">University of Toronto - Faculty of Computer Science</a></div>
+        <img id="uoftbottomlogo" src='../static/uoftbottomlogo.png' />
+        <div id="mark"><p>Site design by Onur Ozkan and Jimmy</p></div>
+    </div>
+    <script src="../static/JS/nav.js"></script>
+    <script src="../static/JS/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- to make the website responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSCB63 Design and Analysis of Data Structures</title>
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <!-- css links-->
+    <link rel="stylesheet" href="../static/CSS/nav.css" />
+    <link rel="stylesheet" href="../static/CSS/studentfeedback.css" />
+</head>
+<body>
+    <!-- header of the site-->
+    <div id="header">
+        <img class="uoftlogo" src='../static/uoftlogo.svg' />
+
+        <!-- navigation links in the header-->
+        {% include 'nav.html' %}
+
+        <div class="userinteraction">
+            <div class="userinfo">
+                <img id="userpng" src='../static/user.png' />
+                <p onmouseover="hoverLink(this)" onclick="dropdownMenu()" onmouseout="changeBackLink(this)">Hi, {{username}}</p><img id="arrow" src='../static/arrow.png' onclick="dropdownMenu()" />
+            </div>
+            <div id="dropdownmenu">
+                <div class="row">
+                    <img class="logout" src='../static/logout.png' /><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- content of the page-->
+    <div class="content">
+        <!-- add course feedback-->
+        <div id="selectionandfeedback">
+        <form method="POST" onsubmit="feedbackSent()">
+            <!-- select an intructor-->
+            <div id="selectionpart">
+                <h1>INSTRUCTOR FEEDBACK</h1>
+                <label for="instructors">Choose an instructor:</label>
+
+                <select name="instructors" id="instructor-select" autofocus required>
+                    <option value="ChooseOption" disabled selected hidden>--Please choose an option--</option>
+                    {% for item in instructors %}
+                        <option value={{item[0]}}>{{item[0]}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <hr>
+
+            <div id="feedbacksec">
+                <!-- intro message-->
+                <div id="intromessages">
+                    <h2>Please enter your feedback in boxes below.</h2>
+                    <h2>Leave the box blank if not appliable.</h2>
+                </div>
+
+                <!-- all feedbacks-->
+                    <div class="feedback">
+                        <!-- redirect to thank you page after sending the feedback-->
+
+                        <div class="feedbacktext"><label for="feedback">a) What do you like about the instructor teaching?</label></div>
+                        <!-- create a feedback box where the user can type-->
+                        <div class="feedbackbox">
+                            <textarea id="feedback" name="student_feedback1"></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="feedback">
+                        <!-- redirect to thank you page after sending the feedback-->
+
+                        <div class="feedbacktext"><label for="feedback">b) What do you recommend the instructor to do to improve their teaching?</label></div>
+                        <!-- create a feedback box where the user can type-->
+                        <div class="feedbackbox">
+                            <textarea id="feedback" name="student_feedback2"></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="feedback">
+                        <!-- redirect to thank you page after sending the feedback-->
+
+                        <div class="feedbacktext"><label for="feedback">c) What do you like about the labs?</label></div>
+                        <!-- create a feedback box where the user can type-->
+                        <div class="feedbackbox">
+                            <textarea id="feedback" name="student_feedback3"></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="feedback">
+                        <!-- redirect to thank you page after sending the feedback-->
+
+                        <div class="feedbacktext"><label for="feedback">d) Would you recommend the lab instructors to do to improve their lab teaching?</label></div>
+                        <!-- create a feedback box where the user can type-->
+                        <div class="feedbackbox">
+                            <textarea id="feedback" name="student_feedback4"></textarea>
+                            <br>
+                        </div>
+                    </div>
+
+                    <!-- add button to submit-->
+                    <button type="submit">Submit</button>
+            </div>
+        </form>
+        </div>
+    </div>
+
+    <!-- add the footer of the page-->
+    <div id="footer">
+        <div id="csfac"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">University of Toronto - Faculty of Computer Science</a></div>
+        <div class="middlefooter">
+            <img id="uoftbottomlogo" src='../static/uoftbottomlogo.png' />
+            <div id="coursename">
+                <p>CSCB63 <br> Design and Analysis of Data Structures</p>
+            </div>
+        </div>
+        <div id="mark"><p>Site design by Onur Ozkan and Jimmy</p></div>
+    </div>
+    <script src="../static/JS/nav.js"></script>
+    <script src="../static/JS/feedback.js"></script>
+</body>
+</html>

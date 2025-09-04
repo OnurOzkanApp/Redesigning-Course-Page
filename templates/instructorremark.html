@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- to make the website responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSCB63 Design and Analysis of Data Structures</title>
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <!-- css links-->
+    <link rel="stylesheet" href="../static/CSS/nav.css" />
+    <link rel="stylesheet" href="../static/CSS/instructorremark.css" />
+</head>
+<body>
+    <!-- header of the site-->
+    <div id="header">
+        <img class="uoftlogo" src='../static/uoftlogo.svg' />
+
+        <!-- navigation links in the header-->
+        {% include 'nav.html' %}
+
+        <div class="userinteraction">
+            <div class="userinfo">
+                <img id="userpng" src='../static/user.png' />
+                <p onmouseover="hoverLink(this)" onclick="dropdownMenu()" onmouseout="changeBackLink(this)">Hi, {{username}}</p><img id="arrow" src='../static/arrow.png' onclick="dropdownMenu()" />
+            </div>
+            <div id="dropdownmenu">
+                <div class="row">
+                    <img class="logout" src='../static/logout.png' /><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- content of the page-->
+    <div class="content">
+        <!-- add course feedback-->
+        <div id="allrequests">
+            <h1>Remark Requests</h1>
+            {% for item in remarks %}
+            <form method="POST">
+                <!-- student submissions-->
+                <div class="submission">
+                    <div class="remarkinfo">
+                        <div class="student-grades">
+                            <h2>Student: {{item[0]}}</h2>
+                            <a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="/grades">Link to Grades</a>
+                        </div>
+                        <h4 name="remarkname">Assessment: {{item[2]}}</h4>
+                    </div>
+                    <p>{{item[1]}}</p>
+                    <div class="checkrequest">
+                        <a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://markus.utsc.utoronto.ca/cscb63w21">Markus Submission</a>
+                        <button value="{{item}}" type="submit" name="closebutton">Close request</button>
+                    </div>
+                </div>
+            </form>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <!-- add the footer of the page-->
+    <div id="footer">
+        <div id="csfac"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">University of Toronto - Faculty of Computer Science</a></div>
+        <div class="middlefooter">
+            <img id="uoftbottomlogo" src='../static/uoftbottomlogo.png' />
+            <div id="coursename">
+                <p>CSCB63 <br> Design and Analysis of Data Structures</p>
+            </div>
+        </div>
+        <div id="mark"><p>Site design by Onur Ozkan and Jimmy</p></div>
+    </div>
+    <script src="../static/JS/nav.js"></script>
+    <script src="../static/JS/remarkrequest.js"></script>
+</body>
+</html>

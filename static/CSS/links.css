@@ -1,0 +1,41 @@
+/* style and change the display of all content*/
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.content a {
+    position: relative;
+    font: bold 1.5vw 'Open Sans', arial, sans-serif;
+    text-transform: none;
+    padding: 0;
+    margin-bottom: 7%;
+    letter-spacing: 0.1em;
+}
+
+.content p {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    font-size: 2vw;
+    color: #444444;
+}
+
+h1{
+    font-size: 10vw;
+    font-weight: 900;
+    margin-bottom: 3%;
+    text-decoration: none;
+    color: #000000;
+}
+
+h2 {
+    font-size: 3vw;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 5%;
+}

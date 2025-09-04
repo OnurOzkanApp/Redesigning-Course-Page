@@ -1,0 +1,9 @@
+/* styling for assignment grades container */
+#assignments {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+}

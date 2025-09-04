@@ -1,0 +1,12 @@
+<!-- get the assessment name, grade and remark status-->
+<div class="table">
+    <h1>{{item[0]}}</h1>
+
+    <p>{{item[1]}}%</p>
+    <div class="remarkbutton"><button type="submit" onclick="openRemarkWindow()">Remark</button></div>
+    <a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://markus.utsc.utoronto.ca/cscb63w21">Markus</a>
+
+    <div id="submission_message">
+        <h5>{{item[3]}}</h5>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+/* feedback responses */
+#allfeedbacks {
+    margin-left:4%;
+    margin-right:4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    font: bold 6vw 'Open Sans', arial, sans-serif;
+    color: #25355A;
+}
+
+/* header and page info*/
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333333;
+    font: 500 1.7vw 'Open Sans', arial, sans-serif;
+}
+#firsthr{
+    width:80%;
+}
+
+/* individual feedbacks */
+.feedback {
+    width: 80%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.feedback h2 {
+    font: bold 2.8vw 'Open Sans', arial, sans-serif;
+}
+.feedback h3 {
+    font: bold 2.6vw 'Open Sans', arial, sans-serif;
+}
+
+/* feedback questions */
+.eachstudentquestions {
+    display: flex;
+    flex-direction: column;
+}
+.questionnumberandtext {
+    width: 80%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    align-self: center;
+    font: 500 1.6vw 'Open Sans', arial, sans-serif;
+}
+.questionnumberandtext p {
+    width: 100%;
+    word-break: break-all;
+    max-width: 100%;
+    margin-left: 1%;
+    color: #444444;
+}
+
+/* separates feedback responses */
+hr {
+    width: 100%;
+    color: black;
+}

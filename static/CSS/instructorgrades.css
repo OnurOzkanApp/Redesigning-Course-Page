@@ -1,0 +1,112 @@
+/* page header title */
+.contenthead {
+    width: 70%;
+    font: bold 2vw 'Open Sans', arial, sans-serif;
+}
+.contenthead h1 {
+    margin-bottom: 2%;
+}
+hr {
+    border-top: 1px solid black;
+    width: 80%;
+    margin-left: 0;
+}
+
+/* main content container */
+.content{
+    margin-left: 5%;
+}
+.pagetables {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font: 1.8vw 'Open Sans', arial, sans-serif;
+}
+/*content for left side of the page*/
+.lefttables {
+    display: flex;
+    flex-direction: column;
+    max-width: 54vw;
+    margin-right: 2%;
+    align-self: flex-start;
+}
+
+/* styling for student grades */
+.assessments {
+    padding: 1%;
+    width: 50vw;
+}
+.assessments h2 {
+    margin-top: 2%;
+}
+.assessmentstable {
+    max-height: 200px;
+    max-width: 95%;
+    margin-left: 2%;
+    overflow: auto;
+}
+
+/* styling of GRID DISPLAY to make it look like a table (there is no table tag!) */
+.gridtable{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+.gridtable > span {
+    padding: 6px 3px;
+    
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+/* styling content for right side of the page*/
+.righttables {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28vw;
+    margin-left: 2%;
+}
+.righttables a {
+    margin-top: 3%;
+    font-size: 2vw;
+    font-weight: bold;
+    border: 0.1px solid;
+    border-radius: 1.5vw;
+    border-color: #444444;
+    padding: 7%;
+    background-color: #25355A;
+}
+
+/* styling for mark adjustment forms */
+.marksadjustment{
+    padding: 10% 6%;
+    background-color: #25355A;
+    border: none;
+    border-radius: 1.5vw;
+    margin-bottom: 10%;
+    
+}
+.dropmenu{
+    margin: 2%;
+    font: bold 1.1vw 'Open sans', arial, sans-serif;
+    color:aliceblue;
+    padding: 2%;
+}
+.dropmenu h2 {
+    margin-top: 0;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+.textform {
+    margin: 2%;
+    font: bold 1.1vw 'Open sans', arial, sans-serif;
+    color: aliceblue;
+    padding: 2%;
+}
+.markbutton{
+    margin-left: 4%;
+}

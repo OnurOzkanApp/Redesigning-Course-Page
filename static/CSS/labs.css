@@ -1,0 +1,63 @@
+/* style all lab content*/
+#weeklylabs{
+    max-width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* style each week's table*/
+.eachweek {
+    max-width: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: ridge;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 2vw;
+    padding: 2%;
+    z-index: 0;
+    margin-bottom: 2%;
+    background-color: #25355A;
+    color: #F2F4F7;
+}
+.eachweek h2 {
+    font: bold 2vw 'Open Sans', arial, sans-serif;
+}
+
+/* file types for labs*/
+.files {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.files p {
+    flex: 1;
+    font: bold 1.5vw 'Open Sans', arial, sans-serif;
+    text-decoration: underline;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+/* files themselfs for each week*/
+.pdfs {
+    max-width: 100%;
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pdfs a {
+    padding: 21%;
+    font: bold 1.1vw 'Open Sans', arial, sans-serif;
+}
+
+/* align the files with their titles*/
+.handouts {
+    margin-left: 36.5%;
+}
+
+.solutions {
+    margin-right: 38.75%;
+}

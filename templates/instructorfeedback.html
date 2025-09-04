@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- to make the website responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSCB63 Design and Analysis of Data Structures</title>
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <!-- css links-->
+    <link rel="stylesheet" href="../static/CSS/nav.css" />
+    <link rel="stylesheet" href="../static/CSS/instructorfeedback.css" />
+</head>
+<body>
+    <!-- header of the site-->
+    <div id="header">
+        <img class="uoftlogo" src='../static/uoftlogo.svg' />
+
+        <!-- navigation links in the header-->
+        {% include 'nav.html' %}
+
+        <div class="userinteraction">
+            <div class="userinfo">
+                <img id="userpng" src='../static/user.png' />
+                <p onmouseover="hoverLink(this)" onclick="dropdownMenu()" onmouseout="changeBackLink(this)">Hi, {{username}}</p><img id="arrow" src='../static/arrow.png' onclick="dropdownMenu()" />
+            </div>
+            <div id="dropdownmenu">
+                <div class="row">
+                    <img class="logout" src='../static/logout.png' /><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- content of the page-->
+    <div class="content">
+        <!-- every single feedback-->
+        <div id="allfeedbacks">
+            <!-- header for all feedbacks-->
+            <div id="intro">
+                <h1> Student's Feedbacks</h1>
+
+                <div id="feedbackquestions">
+                    <p>a) What do you like about the instructor teaching?</p>
+                    <p>b) What do you recommend the instructor to do to improve their teaching?</p>
+                    <p>c) What do you like about the labs?</p>
+                    <p>d) Would you recommend the lab instructors to do to improve their lab teaching?</p>
+                </div>
+            </div>
+
+            <hr id="firsthr">
+
+            <!-- each student's feedback from here to the end-->
+            {% for item in feedbacks %}
+            <div class="feedback">
+                <div class="info">
+                    <h2>Feedback ID: {{item[0]}}</h2>
+                    <h3>Instructor: {{item[5]}}</h3>
+                </div>
+                <!-- feedback texts-->
+                <div class="eachstudentquestions">
+                    <div class="questionnumberandtext">
+                        <h4>a)</h4>
+                        <p>{{item[1]}}</p>
+                    </div>
+                    <div class="questionnumberandtext">
+                        <h4>b)</h4>
+                        <p>{{item[2]}}</p>
+                    </div>
+                    <div class="questionnumberandtext">
+                        <h4>c)</h4>
+                        <p>{{item[3]}}</p>
+                    </div>
+                    <div class="questionnumberandtext">
+                        <h4>d)</h4>
+                        <p>{{item[4]}}</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+
+    <!-- add the footer of the page-->
+    <div id="footer">
+        <div id="csfac"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">University of Toronto - Faculty of Computer Science</a></div>
+        <div class="middlefooter">
+            <img id="uoftbottomlogo" src='../static/uoftbottomlogo.png' />
+            <div id="coursename">
+                <p>CSCB63 <br> Design and Analysis of Data Structures</p>
+            </div>
+        </div>
+        <div id="mark"><p>Site design by Onur Ozkan and Jimmy</p></div>
+    </div>
+    <script src="../static/JS/nav.js"></script>
+</body>
+</html>

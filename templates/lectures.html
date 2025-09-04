@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSCB63 Design and Analysis of Data Structures</title>
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <!-- css files-->
+    <link rel="stylesheet" href="../static/CSS/lectures.css" />
+    <link rel="stylesheet" href="../static/CSS/nav.css" />
+</head>
+<body>
+    <!-- header-->
+    <div id="header">
+        <img class="uoftlogo" src='../static/uoftlogo.svg' />
+
+        <!-- navigation links-->
+        {% include 'nav.html' %}
+
+        <div class="userinteraction">
+            <div class="userinfo">
+                <img id="userpng" src='../static/user.png' />
+                <p onmouseover="hoverLink(this)" onclick="dropdownMenu()" onmouseout="changeBackLink(this)">Hi, {{username}}</p><img id="arrow" src='../static/arrow.png' onclick="dropdownMenu()" />
+            </div>
+            <div id="dropdownmenu">
+                <div class="row">
+                    <img class="logout" src='../static/logout.png' /><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- main content-->
+    <div class="content">
+        <h1>Lectures</h1>
+        <div class="lectures">
+            <!-- important message-->
+            <h2>Important Message: Print and bring the lectures slides/handouts to class each week.</h2>
+            <!-- class materials-->
+            <div class="weeklylist">
+                <div class="eachweek">
+                    <!-- week number and topic-->
+                    <h3>- Week 1: Intro, Worst Case Complexity</h3>
+                    <!-- content of that week-->
+                    <div class="weeklycontent">
+                        <!-- readings, exrcises and videos-->
+                        <div class="lecturesubheaders">
+                            <h4>Pre-Lecture Reading/Exercise</h4>
+                            <div class="videos">
+                                <a href="https://www.youtube.com/watch?v=__vX2sjlpXU&ab_channel=MichaelSambol">Big Oh Video</a>
+                                <a href="https://www.youtube.com/watch?v=__vX2sjlpXU&ab_channel=MichaelSambol">Insertion Sort Video</a>
+                            </div>
+                        </div>
+                        <!-- lecture slides and recordings-->
+                        <div class="lecturesubheaders">
+                            <h4>Slides</h4>
+                            <div class="pdfs">
+                                <a href="../static/mocksyllable.pdf">Intro Slides PDF</a>
+                                <a href="../static/mocksyllable.pdf">Worksheet1_class</a>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <!-- follows the same structure as week 1-->
+                <div class="eachweek">
+                    <h3>- Week 2: Balanced Trees (AVL)</h3>
+                    <div class="weeklycontent">
+                        <div class="lecturesubheaders">
+                            <h4>Pre-Lecture Reading/Exercise</h4>
+                            <div class="videos">
+                                <a href="https://www.cs.usfca.edu/~galles/visualization/BST.html">Video Visualization Applet</a>
+                            </div>
+                        </div>
+                        <div class="lecturesubheaders">
+                            <h4>Slides/Video</h4>
+                            <div class="pdfs">
+                                <a href="https://zoom.us/"> Wednesday Zoom</a>
+                                <a href="../static/mocksyllable.pdf">Worksheet Pdf</a>
+                                <a href="../static/mocksyllable.pdf">Wed Inclass Worksheet PDF</a>
+                                <a href="https://zoom.us/">Thursday Zoom</a>
+                                <a href="../static/mocksyllable.pdf">Thurs Lec Slides PDF</a>
+
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="eachweek">
+                    <h3>- Week 3: AVL Trees height, and Augment. Interval Trees</h3>
+                    <div class="weeklycontent">
+                        <div class="lecturesubheaders">
+                            <h4>Pre-Lecture Reading/Exercise</h4>
+                            <div class="videos">
+                                <p>None</p>
+                            </div>
+                        </div>
+                        <div class="lecturesubheaders">
+                            <h4>Slides</h4>
+                            <div class="pdfs">
+                                <a href="https://zoom.us/">Wednesday Zoom</a>
+                                <a href="../static/mocksyllable.pdf">AVL Trees Augmenting Worksheet</a>
+                                <a href="../static/mocksyllable.pdf">Wed Inclass Worksheet</a>
+                                <a href="https://zoom.us/">Thursday Zoom</a>
+                                <a href="../static/mocksyllable.pdf">Interval Trees Solutions</a>
+                                <a href="../static/mocksyllable.pdf">Interval Trees Inclass Pdf</a>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="eachweek">
+                    <h3>- Week 4: Intro, Finish Interval Trees, Heaps and Graph Search Algorithms</h3>
+                    <div class="weeklycontent">
+                        <div class="lecturesubheaders">
+                            <h4>Pre-Lecture Reading/Exercise</h4>
+                            <div class="videos">
+                                <p>Chapter 6.1-6.4</p>
+                            </div>
+                        </div>
+                        <div class="lecturesubheaders">
+                            <h4>Slides</h4>
+                            <div class="pdfs">
+                                <a href="https://zoom.us/">Wednesday Zoom</a>
+                                <a href="../static/mocksyllable.pdf">Interval Tree Pdf</a>
+                                <a href="../static/mocksyllable.pdf">Search Proof</a>
+                                <a href="../static/mocksyllable.pdf">Heaps Pdf</a>
+                                <a href="https://zoom.us/">Thursday Zoom</a>
+                                <a href="../static/mocksyllable.pdf">Heaps Inclass Notes</a>
+                                <a href="../static/mocksyllable.pdf">Heap Building Example</a>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="eachweek">
+                    <h3>- Week 5: Graph Searches and Minimum Spanning Trees</h3>
+                    <div class="weeklycontent">
+                        <div class="lecturesubheaders">
+                            <h4>Pre-Lecture Reading/Exercise</h4>
+                            <div class="videos">
+                                <p>Wed: Term Test</p>
+                                <p>Thurs: If you have not had your tutorial, read the graph handout on the tutorials page.</p>
+                            </div>
+                        </div>
+                        <div class="lecturesubheaders">
+                            <h4>Slides</h4>
+                            <div class="pdfs">
+                                <a href="https://zoom.us/">Zoom</a>
+                                <a href="../static/mocksyllable.pdf">Graph Search Slides</a>
+                                <a href="../static/mocksyllable.pdf">Searches Worksheet</a>
+                                <a href="../static/mocksyllable.pdf">MST Slides</a>
+                                <a href="../static/mocksyllable.pdf">MST Worksheet</a>
+                                <a href="../static/mocksyllable.pdf">MST Worksheet Solutions</a>
+                                <a href="../static/mocksyllable.pdf">Inclass Graph Notes</a>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="eachweek">
+                    <h3>- Week 6: Proof of Prims, Dijkstra's Algorithm, Strongly Connected Components</h3>
+                    <div class="weeklycontent">
+                        <div class="lecturesubheaders">
+                            <h4>Pre-Lecture Reading/Exercise</h4>
+                            <div class="videos">
+                                <p>Wed: Ch 24.3, Practice Prims algorithm</p>
+                                <p>Thurs: 22.5, Review DFS - make sure you understand it</p>
+                            </div>
+                        </div>
+                        <div class="lecturesubheaders">
+                            <h4>Slides</h4>
+                            <div class="pdfs">
+                                <a href="https://zoom.us/">Wednesday Zoom</a>
+                                <a href="../static/mocksyllable.pdf">Week 6 MST Inclass Notes</a>
+                                <a href="../static/mocksyllable.pdf">Dijkstra Pdf</a>
+                                <a href="https://zoom.us/">Thursday Zoom</a>
+                                <a href="../static/mocksyllable.pdf">Strongly Connected Components Slides</a>
+                                <a href="../static/mocksyllable.pdf">SCC Examples</a>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="eachweek">
+                    <h3>- Week 7: Intro, Finish Interval Trees, Heaps and Graph Search Algorithms</h3>
+                    <div class="weeklycontent">
+                        <div class="lecturesubheaders">
+                            <h4>Pre-Lecture Reading/Exercise</h4>
+                            <div class="videos">
+                                <p>Ch. 17.4, Ch. 21</p>
+                            </div>
+                        </div>
+                        <div class="lecturesubheaders">
+                            <h4>Slides</h4>
+                            <div class="pdfs">
+                                <a href="https://zoom.us/">Wednesday Zoom</a>
+                                <a href="../static/mocksyllable.pdf">Amortized Lecture Slides</a>
+                                <a href="../static/mocksyllable.pdf">Wed Inclass Lecture Slides</a>
+                                <a href="https://zoom.us/">Thursday Zoom</a>
+                                <a href="../static/mocksyllable.pdf">Potential Lecture Slides</a>
+                                <a href="../static/mocksyllable.pdf">Thurs Inclass Lecture Slides</a>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- footer-->
+    <div id="footer">
+        <div id="csfac"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">University of Toronto - Faculty of Computer Science</a></div>
+        <div class="middlefooter">
+            <img id="uoftbottomlogo" src='../static/uoftbottomlogo.png' />
+            <div id="coursename">
+                <p>CSCB63 <br> Design and Analysis of Data Structures</p>
+            </div>
+        </div>
+        <div id="mark"><p>Site design by Onur Ozkan and Jimmy</p></div>
+    </div>
+    <script src="../static/JS/nav.js"></script>
+</body>
+</html>

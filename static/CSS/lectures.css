@@ -1,0 +1,118 @@
+/* style the main header*/
+h1 {
+    font: bold 3vw 'Open Sans', arial, sans-serif;
+    margin: 2%;
+    margin-left: 3%;
+    margin-bottom: 5%;
+    max-width: 20vw;
+    text-align: center;
+    border: none;
+    border-radius: 2vw;
+    padding: 1%;
+    color: #F2F4F7;
+    background-color: #25355A;
+    z-index: 0;
+}
+
+/* put a margin on content of the page*/
+.lectures {
+    z-index: 0;
+    margin-left: 4%;
+}
+
+/* style the important message*/
+h2 {
+    font: bold 2.2vw 'Open Sans', arial, sans-serif;
+    margin-bottom: 3%;
+}
+
+/* style lecture materials*/
+.weeklylist {
+    display: flex;
+    flex-direction: column;
+    font: bold 1vw 'Open Sans', arial, sans-serif;
+}
+
+
+/* style weekly tables*/
+.eachweek {
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    font: 1.5vw 'Open Sans', arial, sans-serif;
+}
+
+.eachweek a:hover {
+    color: #F2F4F7;
+    background-color: #394444;
+    background-size: 10%;
+    text-decoration: underline;
+    transition: 500ms ease;
+}
+
+.weeklycontent {
+    margin-left: 3%;
+    font-weight: 700;
+}
+
+/* week number and topic styles*/
+h3{
+    font-size: 1.8vw;
+    font-weight: 700;
+    margin-bottom: 1%;
+    text-decoration: underline;
+}
+
+/* style subsections(i.e. reading and slides)*/
+h4 {
+    font-size: 1.4vw;
+    color: #333333;
+}
+.lecturesubheaders {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* pre lecture material styling*/
+.videos {
+    width: 90%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #444444;
+    font-size: 1.05vw;
+}
+.videos a {
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+.videos p{
+    margin-right:10%;
+}
+
+
+/* lecture material styling*/
+.pdfs {
+    width: 90%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.pdfs a {
+    font-size: 1.05vw;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+
+
+/* style line breaks to seperate each week*/
+hr {
+    width: 90%;
+    border-top: 1px solid black;
+    margin-right: 10%;
+}

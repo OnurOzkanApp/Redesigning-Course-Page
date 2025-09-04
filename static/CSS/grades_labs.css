@@ -1,0 +1,16 @@
+/* styling for lab grades container */
+#labs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+#labs .table{
+    margin-right: 1%;
+    padding: 4%;
+}

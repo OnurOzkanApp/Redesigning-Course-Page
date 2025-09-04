@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSCB63 Design and Analysis of Data Structures</title>
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <!-- css files-->
+    <link rel="stylesheet" href="../static/CSS/nav.css" />
+    <link rel="stylesheet" href="../static/CSS/assignments.css" />
+</head>
+<body>
+    <!-- header-->
+    <div id="header">
+        <img class="uoftlogo" src='../static/uoftlogo.svg' />
+
+        {% include 'nav.html' %}
+
+        <div class="userinteraction">
+            <div class="userinfo">
+                <img id="userpng" src='../static/user.png' />
+                <p onmouseover="hoverLink(this)" onclick="dropdownMenu()" onmouseout="changeBackLink(this)">Hi, {{username}}</p><img id="arrow" src='../static/arrow.png' onclick="dropdownMenu()" />
+            </div>
+            <div id="dropdownmenu">
+                <div class="row">
+                    <img class="logout" src='../static/logout.png' /><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- page content-->
+    <div class="content">
+        <!-- assignments title-->
+        <h1>Assignments</h1>
+        <!-- assignment details-->
+        <div class="assignments">
+            <!-- assignment 1-->
+            <div class="assignment">
+                <!-- submition link-->
+                <div class="textwithlink"><p>To be submitted to </p><a href="https://markus.utsc.utoronto.ca/cscb63w21">Markus</a></div>
+                <!-- assignment handouts-->
+                <div class="textwithlink"><a href="../static/mocksyllable.pdf">a1.pdf</a><p>,</p><a href="../static/mocksyllable.pdf">a1.tex</a></div>
+                <!-- update on assignments-->
+                <p>Small update on Jan. 27 (noted in red)</p>
+                <!-- assignment number/name-->
+                <h2>Assignment 1</h2>
+            </div>
+            <!-- assignment 2 follows tha same structure as A1-->
+            <div class="assignment">
+                <div class="textwithlink"><p>To be submitted to </p><a href="https://markus.utsc.utoronto.ca/cscb63w21">Markus</a></div>
+                <div class="textwithlink"><a href="../static/mocksyllable.pdf">a2.pdf</a><p>,</p><a href="../static/mocksyllable.pdf">a2.tex</a></div>
+                <p>Note new due date.</p>
+                <h2>Assignment 2</h2>
+            </div>
+            <!-- assignment 3 follows tha same structure as A1-->
+            <div class="assignment">
+                <div class="textwithlink"><p>To be submitted to </p><a href="https://markus.utsc.utoronto.ca/cscb63w21">Markus</a></div>
+                <div class="textwithlink"><a href="../static/mocksyllable.pdf">a3.pdf</a><p>,</p><a href="../static/mocksyllable.pdf">a3.tex</a></div>
+                <p>Note new due date (Sunday March 23 at noon).</p>
+                <h2>Assignment 3</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer-->
+    <div id="footer">
+        <div id="csfac"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">University of Toronto - Faculty of Computer Science</a></div>
+        <div class="middlefooter">
+            <img id="uoftbottomlogo" src='../static/uoftbottomlogo.png' />
+            <div id="coursename">
+                <p>CSCB63 <br> Design and Analysis of Data Structures</p>
+            </div>
+        </div>
+        <div id="mark"><p>Site design by Onur Ozkan and Jimmy</p></div>
+    </div>
+    <script src="../static/JS/nav.js"></script>
+</body>
+</html>

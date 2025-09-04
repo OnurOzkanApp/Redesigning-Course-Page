@@ -1,0 +1,142 @@
+/* if the remark request window pops up lock the scrolling option*/
+body {
+    overflow-y: scroll;
+}
+
+/* inner navigation bar for choosing which grades to display (ie assignments, labs, etc */
+#navigationbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font: bold 2vw 'Open Sans', arial, sans-serif;
+}
+hr{
+    width: 80%;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 6%;
+}
+h5 {
+    text-align: center;
+}
+
+/* used for styling flask flash messages (remark notifications to the user) */
+.notificationmessage h2{
+    margin-bottom: 4%;
+    text-align: center;
+}
+#newmessage {
+    font: bold 2.5vw 'Open Sans', arial, sans-serif;
+    color: lightcoral
+}
+
+/* universal styling for tables/containers/box to contain grade info */
+.table {
+    width: 20%;
+    max-width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #25355A;
+    color: white;
+    border: none;
+    border-radius: 2vw;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    padding: 4%;
+    font: bold 2.5vw 'Open Sans', arial, sans-serif;
+    margin-bottom: 2%;
+}
+.table h1 {
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 4%;
+}
+.table a {
+    font-size: 2vw;
+}
+
+/* buttons*/
+button {
+    width: 10vw;
+    font-size: 1.5vw;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    margin-bottom: 20%;
+}
+button:hover {
+    color: #007FA3;
+}
+
+/* styling for remark popup */
+.remarkbackground{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+}
+.remarkcontent {
+    width: 60%;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F2F4F7;
+    font: bold 2vw 'Open Sans', arial, sans-serif;
+    visibility: hidden;
+}
+.closebutton {
+    transform: rotate(45deg);
+    align-self: flex-end;
+    margin-top: 1%;
+    margin-right: 4%;
+    font-size: 4vw;
+    font-weight: 100;
+    cursor: pointer;
+}
+.remarkcontent h2{
+   margin-top: 1%;
+}
+
+/* styling remark request form */
+form{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7%;
+}
+.textwithoption {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.textwithoption h4{
+    font-size: 1.5vw;
+}
+.textwithoption select {
+    margin-left: 2%;
+}
+textarea {
+    resize: none;
+    background-color: #007FA3;
+    border: 0px solid #25355A;
+    font: 1.5vw 'Open Sans', arial, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    outline: 0;
+    width: 100%;
+    padding: 8% 4%;
+    color: #F2F4F7;
+    margin-bottom: 0px;
+}

@@ -1,0 +1,111 @@
+/* feedback styling*/
+#selectionandfeedback {
+    display: flex;
+    flex-direction: column;
+    font: 1vw 'Open Sans', arial, sans-serif;
+}
+
+#selectionpart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #444444;
+}
+
+h1 {
+    color: black;
+    font-size: 3.5vw;
+    font-weight: 700;
+}
+
+hr{
+    margin-top: 3%;
+    margin-bottom: 5%;
+    width: 80%;
+    color: black;
+}
+
+#feedbacksec {
+    width: 90%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font: 1.5vw 'Open Sans', arial, sans-serif;
+}
+
+#intromessages{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.6vw;
+    font-weight: 900;
+}
+
+h2 {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
+.feedback {
+    width: 90%;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    color: #333333;
+    font-size: 1.8vw;
+    font-weight: 500;
+}
+
+form {
+    width:100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* feedback text*/
+.feedbacktext {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* feedback box*/
+.feedbackbox {
+    width: 80%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+textarea {
+    resize: none;
+    background-color: #007FA3;
+    border: 0px solid #25355A;
+    font: 1.5vw 'Open Sans', arial, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;    outline: 0;
+    width: 100%;
+    padding: 8% 4%;
+    color: #F2F4F7;
+    margin-bottom: 0px;
+}
+
+/* button*/
+button {
+   margin-top: 3%;
+}
+
+button:hover {
+    color: #007FA3;
+}

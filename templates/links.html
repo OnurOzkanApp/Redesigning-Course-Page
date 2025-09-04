@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSCB63 Design and Analysis of Data Structures</title>
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <!-- css files-->
+    <link rel="stylesheet" href="../static/CSS/nav.css" />
+    <link rel="stylesheet" href="../static/CSS/links.css" />
+</head>
+<body>
+    <!-- header-->
+    <div id="header">
+        <img class="uoftlogo" src='../static/uoftlogo.svg' />
+
+        <!-- navigation links-->
+        {% include 'nav.html' %}
+
+        <div class="userinteraction">
+            <div class="userinfo">
+                <img id="userpng" src='../static/user.png' />
+                <p onmouseover="hoverLink(this)" onclick="dropdownMenu()" onmouseout="changeBackLink(this)">Hi, {{username}}</p><img id="arrow" src='../static/arrow.png' onclick="dropdownMenu()"/>
+            </div>
+            <div id="dropdownmenu">
+                <div class="row">
+                    <img class="logout" src='../static/logout.png' /><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="/logout">Logout</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- content of the page-->
+    <div class="content">
+        <!-- external links-->
+        <h1>Links</h1>
+        <!-- latex link and details-->
+        <h2>Latex Link</h2>
+        <p>
+            For LaTeX installations, go to the latex project install website.
+            Both the Windows and Mac versions listed come with editors as well as the packages and compilers.
+            Once you are up and running, I recommend downloading the Not So Short Guide to LaTeX.
+            Everything you need is there, however it may be overkill. You can also start with this template.tex and
+            add as you need.
+        </p>
+        <!-- external Piazza link for questions-->
+        <h2>Piazza Link</h2>
+        <a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://piazza.com/utoronto.ca/winter2021/cscb63h3slec01/home">https://piazza.com/utoronto.ca/winter2021/cscb63h3slec01/home</a>
+        <!-- external Markus link for submition-->
+        <h2>Markus Link</h2>
+        <a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://markus.utsc.utoronto.ca/cscb63w21">https://markus.utsc.utoronto.ca/cscb63w21</a>
+    </div>
+
+    <!-- footer-->
+    <div id="footer">
+        <div id="csfac"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">University of Toronto - Faculty of Computer Science</a></div>
+        <div class="middlefooter">
+            <img id="uoftbottomlogo" src='../static/uoftbottomlogo.png' />
+            <div id="coursename">
+                <p>CSCB63 <br> Design and Analysis of Data Structures</p>
+            </div>
+        </div>
+        <div id="mark"><p>Site design by Onur Ozkan and Jimmy</p></div>
+    </div>
+    <script src="../static/JS/nav.js"></script>
+</body>
+</html>

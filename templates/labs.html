@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSCB63 Design and Analysis of Data Structures</title>
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <!-- css files-->
+    <link rel="stylesheet" href="../static/CSS/nav.css" />
+    <link rel="stylesheet" href="../static/CSS/labs.css" />
+</head>
+<body>
+    <!-- header-->
+    <div id="header">
+        <img class="uoftlogo" src='../static/uoftlogo.svg' />
+
+        <!-- navigation links-->
+        {% include 'nav.html' %}
+
+        <div class="userinteraction">
+            <div class="userinfo">
+                <img id="userpng" src='../static/user.png' />
+                <p onmouseover="hoverLink(this)" onclick="dropdownMenu()" onmouseout="changeBackLink(this)">Hi, {{username}}</p><img id="arrow" src='../static/arrow.png' onclick="dropdownMenu()" />
+            </div>
+            <div id="dropdownmenu">
+                <div class="row">
+                    <img class="logout" src='../static/logout.png' /><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- page content-->
+    <div class="content">
+        <!-- all material-->
+        <div id="weeklylabs">
+            <!-- weekly material-->
+            <div class="eachweek">
+                <!-- first week no material-->
+                <h2> Week 1: No Topic</h2>
+            </div>
+
+            <div class="eachweek">
+                <!-- week number and topic-->
+                <h2> Week 2: Worst Case Complexity</h2>
+                <!-- files for that week's tutorial/lab-->
+                <div class="files">
+                    <p>Handout</p><p>Solution</p>
+                </div>
+                <div class="pdfs">
+                    <div class="handouts"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="../static/mocksyllable.pdf">handout</a></div>
+                    <div class="solutions"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="../static/mocksyllable.pdf">solution</a></div>
+                </div>
+            </div>
+
+            <!-- follows week 2's structure for the rest of the weeks-->
+            <div class="eachweek">
+                <h2> Week 3: AVL Trees Insert/Delete</h2>
+                <div class="files">
+                    <p>Handout</p><p>Solution</p>
+                </div>
+                <div class="pdfs">
+                    <div class="handouts"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="../static/mocksyllable.pdf">handout</a></div>
+                    <div class="solutions"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="../static/mocksyllable.pdf">solution</a></div>
+                </div>
+            </div>
+
+            <div class="eachweek">
+                <h2> Week 4: Practice Term test format</h2>
+            </div>
+
+            <div class="eachweek">
+                <h2> Week 5: Graph Search Algorithms</h2>
+                <div class="files">
+                    <p>Handout</p><p>Solution</p>
+                </div>
+                <div class="pdfs">
+                    <div class="handouts"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="../static/mocksyllable.pdf">handout</a></div>
+                    <div class="solutions"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="../static/mocksyllable.pdf">solution</a></div>
+                </div>
+            </div>
+
+            <div class="eachweek">
+                <h2> Week 6: MSTs and Prims Algorithm</h2>
+                <div class="files">
+                    <p>Handout</p><p>Solution</p>
+                </div>
+                <div class="pdfs">
+                    <div class="handouts"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="../static/mocksyllable.pdf">handout</a></div>
+                </div>
+            </div>
+
+            <div class="eachweek">
+                <h2> Week 7: Dijkstra</h2>
+                <div class="files">
+                    <p>Handout</p><p>Solution</p>
+                </div>
+                <div class="pdfs">
+                    <div class="handouts"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="../static/mocksyllable.pdf">handout</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer-->
+    <div id="footer">
+        <div id="csfac"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">University of Toronto - Faculty of Computer Science</a></div>
+        <div class="middlefooter">
+            <img id="uoftbottomlogo" src='../static/uoftbottomlogo.png' />
+            <div id="coursename">
+                <p>CSCB63 <br> Design and Analysis of Data Structures</p>
+            </div>
+        </div>
+        <div id="mark"><p>Site design by Onur Ozkan and Jimmy</p></div>
+    </div>
+    <script src="../static/JS/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!-- Remark Request Pop up Window-->
+<div class="remarkbackground">
+    <div class="remarkcontent">
+        <div class="closebutton" onclick="closeWindow()">+</div>
+        <h2>Remark Request</h2>
+        <form method="POST">
+            <div class="textwithoption">
+                <h4>Assesment to remark: </h4>
+                <select name="select_remark">
+                    {% for item in assessments %}
+                    <option value="{{item[0]}}">{{ item[0] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <textarea id="remarkrequest" name="remark_request"></textarea>
+            <!-- add button to submit-->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>

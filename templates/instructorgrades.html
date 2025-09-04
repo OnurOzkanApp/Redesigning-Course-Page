@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSCB63 Design and Analysis of Data Structures</title>
+    <!-- css files-->
+    <link rel="stylesheet" href="../static/CSS/nav.css" />
+    <link rel="stylesheet" href="../static/CSS/instructorgrades.css" />
+</head>
+<body>
+    <!-- header-->
+    <div id="header">
+        <img class="uoftlogo" src='../static/uoftlogo.svg' />
+
+        <!-- navigation links-->
+        {% include 'nav.html' %}
+
+        <div class="userinteraction">
+            <div class="userinfo">
+                <img id="userpng" src='../static/user.png' />
+                <p onmouseover="hoverLink(this)" onclick="dropdownMenu()" onmouseout="changeBackLink(this)">Hi, {{username}}</p><img id="arrow" src='../static/arrow.png' onclick="dropdownMenu()" />
+            </div>
+            <div id="dropdownmenu">
+                <div class="row">
+                    <img class="logout" src='../static/logout.png' /><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- content of the page-->
+    <div class="content">
+        <!-- header-->
+        <div class="contenthead">
+            <h1>Grades for CSCB63</h1>
+            <hr>
+        </div>
+
+        <!-- left and right tables-->
+        <div class="pagetables">
+
+            <!-- all grades-->
+            <div class="lefttables">
+                <div class="assessments">
+                    <h2>ASSIGNMENTS</h2>
+                    <div class="assessmentstable">
+                        <!-- making a table using grid display -->
+                        <!-- resources that helped: https://css-tricks.com/snippets/css/complete-guide-grid/#grid-properties -->
+                        <div class="gridtable">
+                            <span> <strong>Assignment</strong> </span>
+                            <span> <strong>Student</strong> </span>
+                            <span> <strong>Student Id</strong> </span>
+                            <span> <strong>Grade</strong> </span>
+
+                            {% for item in results_grades[0] %}
+                            <span>{{ item[0] }}</span>
+                            <span>{{ item[1] }}</span>
+                            <span>{{ item[2] }}</span>
+                            <span>{{ item[3] }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="assessments">
+                    <h2>LABS</h2>
+                    <div class="assessmentstable">
+                        <div class="gridtable">
+                            <span> <strong>Lab</strong> </span>
+                            <span> <strong>Student</strong> </span>
+                            <span> <strong>Student Id</strong> </span>
+                            <span> <strong>Grade</strong> </span>
+                            
+                            {% for item in results_grades[1] %}
+                            <span>{{ item[0] }}</span>
+                            <span>{{ item[1] }}</span>
+                            <span>{{ item[2] }}</span>
+                            <span>{{ item[3] }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="assessments">
+                    <h2>MIDTERMS</h2>
+                    <div class="assessmentstable">
+                        <div class="gridtable">
+                            <span> <strong>Midterm</strong> </span>
+                            <span> <strong>Student</strong> </span>
+                            <span> <strong>Student Id</strong> </span>
+                            <span> <strong>Grade</strong> </span>
+                            
+                            {% for item in results_grades[2] %}
+                            <span>{{ item[0] }}</span>
+                            <span>{{ item[1] }}</span>
+                            <span>{{ item[2] }}</span>
+                            <span>{{ item[3] }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="assessments">
+                    <h2>FINAL</h2>
+                    <div class="assessmentstable">
+                        <div class="gridtable">
+                            <span> <strong>Final</strong> </span>
+                            <span> <strong>Student</strong> </span>
+                            <span> <strong>Student Id</strong> </span>
+                            <span> <strong>Grade</strong> </span>
+                            
+                            {% for item in results_grades[3] %}
+                            <span>{{ item[0] }}</span>
+                            <span>{{ item[1] }}</span>
+                            <span>{{ item[2] }}</span>
+                            <span>{{ item[3] }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- remark requests and adjusting grades-->
+            <div class="righttables">
+                <!-- link for pending remark requests -->
+                <a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="/instructorremark">Remark Requests</a>
+
+                <!-- mark adjustment forms -->
+                <h2>Add/adjust marks</h2>
+                {% for type in assessments %}
+                <div class="marksadjustment">
+                    <form method="POST">
+                        <div class="dropmenu">
+                            <h2>{{type}}</h2>
+                            <label>Assessment:</label>
+                            <select name="select_assessment">
+                                {% for item in results_assessments[assessments.index(type)] %}
+                                <option value="{{item[0]}}">{{item[0]}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="dropmenu">
+                            <label>Student:</label>
+                            <select name="select_student">
+                                {% for item in results_students %}
+                                <option value={{item[0]}}>{{ item[0] }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="textform">
+                            <label>Grade:</label>
+                            <input type="number" class="numberfield" placeholder="0-100" name="grade" min="0" max="100">
+                        </div>
+                        <button name="subbutton" class="markbutton" value="{{type}}">Add/adjust mark</button>
+                    </form>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- footer-->
+    <div id="footer">
+        <div id="csfac"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">University of Toronto - Faculty of Computer Science</a></div>
+        <div class="middlefooter">
+            <img id="uoftbottomlogo" src='../static/uoftbottomlogo.png' />
+            <div id="coursename">
+                <p>CSCB63 <br> Design and Analysis of Data Structures</p>
+            </div>
+        </div>
+        <div id="mark"><p>Site design by Onur Ozkan and Jimmy</p></div>
+    </div>
+    <script src="../static/JS/nav.js"></script>
+</body>
+</html>

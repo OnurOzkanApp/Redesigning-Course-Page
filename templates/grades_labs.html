@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- to make the website responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSCB63 Design and Analysis of Data Structures</title>
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <!-- css links-->
+    <link rel="stylesheet" href="../static/CSS/nav.css" />
+    <link rel="stylesheet" href="../static/CSS/grades.css" />
+    <link rel="stylesheet" href="../static/CSS/grades_labs.css" />
+</head>
+<body>
+    <!-- header of the site-->
+    <div id="header">
+        <img class="uoftlogo" src='../static/uoftlogo.svg' />
+
+        <!-- navigation links in the header-->
+        {% include 'nav.html' %}
+
+        <div class="userinteraction">
+            <div class="userinfo">
+                <img id="userpng" src='../static/user.png' />
+                <p onmouseover="hoverLink(this)" onclick="dropdownMenu()" onmouseout="changeBackLink(this)">Hi, {{username}}</p><img id="arrow" src='../static/arrow.png' onclick="dropdownMenu()" />
+            </div>
+            <div id="dropdownmenu">
+                <div class="row">
+                    <img class="logout" src='../static/logout.png' /><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- content of the page-->
+    <div class="content">
+        <!-- grades navigation bar-->
+        {% include 'grades_nav.html' %}
+
+        <div class="notificationmessage">
+            <!-- taken from Flask documentation for flask message flash-->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <h2 id="newmessage">{{messages[0]}}</h2>
+            {% endif %}
+            {% endwith %}
+        </div>
+
+        <!-- Labs-->
+        <div id="labs">
+            {% for item in assessments %}
+            <!-- get grades from grade info-->
+            {% include 'gradeinfo.html' %}
+            {% endfor %}
+        </div>
+
+        <!-- remark window-->
+        {% include 'remarkrequest.html' %}
+
+    </div>
+
+    <!-- add the footer of the page-->
+    <div id="footer">
+        <div id="csfac"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">University of Toronto - Faculty of Computer Science</a></div>
+        <div class="middlefooter">
+            <img id="uoftbottomlogo" src='../static/uoftbottomlogo.png' />
+            <div id="coursename">
+                <p>CSCB63 <br> Design and Analysis of Data Structures</p>
+            </div>
+        </div>
+        <div id="mark"><p>Site design by Onur Ozkan and Jimmy</p></div>
+    </div>
+    <script src="../static/JS/nav.js"></script>
+    <script src="../static/JS/studentgrades.js"></script>
+    <script src="../static/JS/remarkrequest.js"></script>
+</body>
+</html>

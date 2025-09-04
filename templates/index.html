@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- to make the website responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSCB63 Design and Analysis of Data Structures</title>
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <!-- css links-->
+    <link rel="stylesheet" href="../static/CSS/nav.css" />
+    <link rel="stylesheet" href="../static/CSS/index.css" />
+</head>
+<body onload="animatedTables()">
+    <!-- header of the site-->
+    <div id="headerhome">
+        <div class="gradient-overlay" onmouseover="focusPic()" onmouseout="blurPic()"><div id="headerpic"></div></div>
+        <div id="headercontbackground" onmouseover="focusPic()" onmouseout="blurPic()">
+            <div id="headercontent">
+                <!-- uoft logo-->
+                <div class="uoftlogo">
+                    <img id="uoftbluetoplogo" src='../static/uoftbluelogo.png' /><img id="uoftwhitetoplogo" src='../static/uoftlogo.svg' />
+                </div>
+                <!-- navigation links in the header-->
+                {% include 'nav.html' %}
+
+
+                <div class="userinteraction">
+                    <div class="userinfo">
+                        <img id="userpng" src='../static/user.png' />
+                        <p onmouseover="hoverLink(this)" onclick="dropdownMenu()" onmouseout="changeBackLink(this)">Hi, {{username}}</p><img id="arrow" src='../static/arrow.png' onclick="dropdownMenu()" />
+                    </div>
+                    <div id="dropdownmenu">
+                        <div class="row">
+                            <img class="logout" src='../static/logout.png' /><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="/logout">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- content of the page-->
+    <div class="content">
+        <div id="introheaders">
+            <h1>Welcome to CSCB63</h1>
+            <h2>Essentials</h2>
+        </div>
+
+        <div id="coursedescription">
+            <div class="header-content">
+                <h3>Course Description</h3>
+                <p>
+                    Design, analysis, implementation and comparison of efficient data structures for common abstract data types.
+                    Priority queues: heaps and mergeable heaps. Dictionaries: balanced binary search trees, B-trees, hashing.
+                    Amortization: data structures for managing dynamic tables and disjoint sets. Data structures for representing graphs. Graph searches.
+                </p>
+            </div>
+
+            <div class="header-content">
+                <h4>Exclusion</h4>
+                <p>CSC263H, CSC265H, (CSCC78H)</p>
+            </div>
+
+            <div class="header-content">
+                <h4>Prerequisite</h4>
+                <p>CSCB36H or (CSCB38H) & [CGPA 2.75 or enrolment in a CSC subject POSt]</p>
+            </div>
+        </div>
+
+        <!-- second portion -->>
+        <div id="secondsection">
+            <div id="lefttable">
+                <div class="header-content">
+                    <h3>Syllabus</h3>
+                    <div id="syllabus"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="../static/mocksyllable.pdf">Course Syllabus</a></div>
+                </div>
+
+                <!-- course team table-->
+                <div class="header-content">
+                    <h3>Course Team</h3>
+                    <h4>Instructor</h4>
+                    <div class="textwithlink">
+                        <p>Email:</p>
+                        <a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="mailto:anna.bretscher@utoronto.ca">anna.bretscher@utoronto.ca</a>
+                    </div>
+                    <p>Office: IC 493</p>
+                    <h4>TA</h4>
+                    <div id="tas">
+                        <div id="tapics">
+                            <img class="pics" src='../static/ta1.jpg' />
+                            <img class="pics" src='../static/ta2.jpg' />
+                            <img class="pics" src='../static/ta3.jpg' />
+                        </div>
+                        <div id="tanames">
+                            <p>Karen McConnell</p>
+                            <p>Rahela Linville</p>
+                            <p>Kakule Sweet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="righttable">
+                <h3>Timetable</h3>
+
+                <!-- timetable for the course-->
+                <div id="timetable">
+                    <div class="header-content">
+                        <h4>Lectures</h4>
+                        <div class="textwithlink">
+                            <p>Wednesdays 3-4pm,<br> Thursdays 9:10-11:00</p><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://zoom.us/">Zoom Link</a>
+                        </div>
+                        <h4>Office Hours</h4> <p>Usually Mondays 11:00-12:30,<br> Friday 10:40-11:30.<br> Please see the calendar for weekly changes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- embedded calendar w/ mobile alternative (hyperlink) -->
+        <div id="calendar">
+            <div id="pc-calendar">
+                <iframe src="https://calendar.google.com/calendar/htmlembed?src=f2oogqnfo1q728k3lcbtr4v478%40group.calendar.google.com&ctz=America%2FToronto" style="border: 0" width="800" height="500" frameborder="0" scrolling="yes"></iframe>
+            </div>
+
+            <div id="mobile-calendar">
+                <div class="textwithlink">
+                    <p>Embeded Link is not available on mobile.<br> Direct link to calendar : </p>
+                    <a href="https://calendar.google.com/calendar/htmlembed?src=f2oogqnfo1q728k3lcbtr4v478%40group.calendar.google.com&ctz=America%2FToronto">Calendar</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- add the footer of the page-->
+    <div id="footer">
+        <div id="csfac"><a onmouseover="hoverLink(this)" onclick="clickLink(this)" onmouseout="changeBackLink(this)" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">University of Toronto - Faculty of Computer Science</a></div>
+        <div class="middlefooter">
+            <img id="uoftbottomlogo" src='../static/uoftbottomlogo.png' />
+            <div id="coursename">
+                <p>CSCB63 <br> Design and Analysis of Data Structures</p>
+            </div>
+        </div>
+        <div id="mark"><p>Site design by Onur Ozkan and Jimmy</p></div>
+    </div>
+    <script src="../static/JS/nav.js"></script>
+    <script src="../static/JS/index.js"></script>
+</body>
+</html>

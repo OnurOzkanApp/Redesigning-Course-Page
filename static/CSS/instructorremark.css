@@ -1,0 +1,78 @@
+/* request container */
+#allrequests {
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    text-align: center;
+    margin-left: 2%;
+    font: bold 5vw 'Open Sans', arial, sans-serif;
+    color: #25355A;
+}
+
+/* individual remark submissions */
+.submission {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(208,208,208, 0.7);
+    padding: 2% 4%;
+    margin: 4% 0%;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+}
+.submission p {
+    margin-top: 1%;
+    margin-left: 2%;
+    font: 2vw 'Open Sans', arial, sans-serif;
+    word-break: break-all;
+    color: #444444;
+}
+
+/* styling the information of the remark request */
+.remarkinfo {
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font: 1vw 'Open Sans', arial, sans-serif;
+}
+.remarkinfo h2 {
+    margin-bottom: 1%;
+    font-size: 2.5vw;
+    font-weight: 700;
+}
+.remarkinfo h4 {
+    margin-top: 0;
+    font-size: 1.8vw;
+    color: #222222;
+}
+/* styling external links regarding student assessment */
+.student-grades {
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    font: bold 1.5vw 'Open Sans', arial, sans-serif;
+}
+
+/* bottom half of the remark request (closing button and markus link) */
+.checkrequest {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font: bold 1.5vw 'Open Sans', arial, sans-serif;
+}
+.checkrequest form {
+    width: 25%;
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+button:hover {
+    color: #007FA3;
+}
